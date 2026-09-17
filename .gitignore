@@ -1,6 +1,6 @@
 __pycache__/
+releases/
 *.py[cod]
 .venv/
 .env
-备份/
 *.tmp
