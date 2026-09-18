@@ -24,6 +24,8 @@
 ```powershell
 # 一键更新：并行抓取，成功后合并
 .\update_Ban.bat
+或者
+.\update_Ban.ps1
 ```
 
 也可以分步执行：
@@ -41,10 +43,6 @@ python merge_Ban.py first.txt second.txt --output custom-Ban.dat
 ```
 
 抓取脚本支持 `--url`、`--output` 和 `--timeout` 参数；使用 `--help` 查看完整说明。
-
-# 更新了Powershell用的PS1启动脚本
-.\update_Ban.ps1
-右键使用Powershell打开即可一键按序调用Python脚本。
 
 ## 测试
 
