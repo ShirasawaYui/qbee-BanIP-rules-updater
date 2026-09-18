@@ -42,25 +42,9 @@ python merge_Ban.py first.txt second.txt --output custom-Ban.dat
 
 抓取脚本支持 `--url`、`--output` 和 `--timeout` 参数；使用 `--help` 查看完整说明。
 
-```
 # 更新了Powershell用的PS1启动脚本
 .\update_Ban.ps1
 右键使用Powershell打开即可一键按序调用Python脚本。
-```
-## 文件说明
-
-| 文件 | 用途 |
-| --- | --- |
-| `scrape_DamnYou.py` | 抓取腾讯文档并提取“对策B”代码块中的 IP 段 |
-| `scrape_BTN.py` | 抓取 BTN 规则并移除注释、空行 |
-| `merge_Ban.py` | 合并两个输入文件并生成精确并集 `Ban.dat` |
-| `update_Ban.bat` | Windows 一键调度入口 |
-| `DamnYou.txt` | 腾讯文档抓取结果快照 |
-| `BTN.txt` | BTN 抓取结果快照 |
-| `Ban.dat` | 合并后的输出文件 |
-| `tests/` | 离线单元测试和 HTTP 模拟测试 |
-
-`备份/` 和 Python 缓存目录仅作为本地历史/运行产物保留，不参与发布。
 
 ## 测试
 
@@ -75,7 +59,6 @@ python -m unittest discover -s tests -v
 - 文本输出使用 UTF-8 和 LF 换行。
 - 写入采用临时文件再原子替换；抓取或解析失败时保留旧输出。
 - 合并不会扩大输入范围，只输出两个来源的精确 IP 并集。
-- 规则来源会随时间变化；发布到 GitHub 的 `DamnYou.txt`、`BTN.txt` 和 `Ban.dat` 是生成时的快照，更新时请重新运行抓取和合并流程。
 
 ## 来源
 
