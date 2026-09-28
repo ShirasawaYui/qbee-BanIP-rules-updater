@@ -1,4 +1,4 @@
-# QBEE IP 规则更新工具
+# qBittorrent BanIP 规则更新工具
 
 用于从两个公开规则来源抓取 IP 段，清理后合并成 QBEE 可使用的 `Ban.dat`。项目只使用 Python 标准库，不需要额外安装第三方依赖。
 
